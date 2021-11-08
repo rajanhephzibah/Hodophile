@@ -1,18 +1,35 @@
 import React from 'react';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import {DropdownButton, Dropdown} from 'react-bootstrap';
+import data from './countries.json';
 
 const Flights = (props) => {
+
+  const listofcountries =[];
+
+  // const countries = {
+  //    listofcountries: ["India", "USA", "China", "Russia"]
+  // };
+  //
+  // return  (
+  //       <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+  //       <Dropdown.Item title={data}>{data.name}</Dropdown.Item>
+  //       </DropdownButton>
+  //           )
+
+  data.map( (data) =>{
+          listofcountries.push(data.name)
+                  }
+                )
+
   return(
     <div>
     <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-      <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+    {listofcountries.map(data=>(<Dropdown.Item title={data}>{data}</Dropdown.Item>
+    ))}
     </DropdownButton>
     </div>
   )
-
+}
 
   {/*if (typeof (props.flights[0]) === 'object') {
     return (
@@ -27,6 +44,6 @@ const Flights = (props) => {
       <h3 className = "glyphicon glyphicon-plane" id ="plane"></h3>
     )
   }*/}
-}
+
 
 export default Flights;
