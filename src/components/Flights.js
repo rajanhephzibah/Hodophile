@@ -1,21 +1,12 @@
 import React from 'react';
-import {DropdownButton, Dropdown} from 'react-bootstrap';
+import {DropdownButton, Dropdown, ButtonGroup} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import data from './countries.json';
+import './Design.css';
 
 const Flights = (props) => {
 
   const listofcountries =[];
-
-  // const countries = {
-  //    listofcountries: ["India", "USA", "China", "Russia"]
-  // };
-  //
-  // return  (
-  //       <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-  //       <Dropdown.Item title={data}>{data.name}</Dropdown.Item>
-  //       </DropdownButton>
-  //           )
-
   data.map( (data) =>{
           listofcountries.push(data.name)
                   }
@@ -23,11 +14,21 @@ const Flights = (props) => {
 
   return(
     <div>
-    <DropdownButton id="dropdown-basic-button" title="Dropdown button">
-    {listofcountries.map(data=>(<Dropdown.Item title={data}>{data}</Dropdown.Item>
-    ))}
-    </DropdownButton>
+  {['Flight From', 'Flight To'].map(
+    (variant) => (
+      <DropdownButton
+        as={ButtonGroup}
+        key={variant}
+        id={`dropdown-variants-${variant}`}
+        title={variant}
+      >
+      {listofcountries.map(data=>(<Dropdown.Item title={data}>{data}</Dropdown.Item>
+      ))}
+      </DropdownButton>
+    ),
+  )}
     </div>
+
   )
 }
 
