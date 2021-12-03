@@ -3,11 +3,11 @@ const bodyParser = require('body-parser');
 const items = require('../database-mongo');
 const request = require('request');
 const app = express();
-const hotel = require('./hotel/hotel')
-const yelpattr = require('./yelpattraction/yelpattraction')
-const yelpfood = require('./yelpfood/yelpfood')
-const weather = require('./weatherAPI/weather.js');
-const geolocation = require('./geolocationAPI/geolocation.js');
+// const hotel = require('./hotel/hotel')
+// const yelpattr = require('./yelpattraction/yelpattraction')
+// const yelpfood = require('./yelpfood/yelpfood')
+// const weather = require('./weatherAPI/weather.js');
+// const geolocation = require('./geolocationAPI/geolocation.js');
 
 app.use(express.static(__dirname + '/../react-client/dist'));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -46,32 +46,32 @@ app.post('/weather', function(req,res) {
   });
 })
 
-app.post('/save', (req, res) => {
-  var data = JSON.parse(req.body.data);
-  items.saveToDatabase(data, function(err, result) {
-    if(err) {
-      console.log('server received database error when saving a record');
-    } else {
-      res.sendStatus(200);
-    }
-  })
-});
+// app.post('/save', (req, res) => {
+//   var data = JSON.parse(req.body.data);
+//   items.saveToDatabase(data, function(err, result) {
+//     if(err) {
+//       console.log('server received database error when saving a record');
+//     } else {
+//       res.sendStatus(200);
+//     }
+//   })
+// });
 
-app.post('/removeRecord', (req, res) => {
-   var id = req.body.uniqueID;
-   items.deleteFromDatabase(id);
-   res.sendStatus(200);
-});
+// app.post('/removeRecord', (req, res) => {
+//    var id = req.body.uniqueID;
+//    items.deleteFromDatabase(id);
+//    res.sendStatus(200);
+// });
 
-app.get('/getAll', (req, res) => {
-  items.selectAll(function(err, result) {
-    if(err) {
-      console.log('server received database error when retrieving records');
-    } else {
-      res.send(result);
-    }
-  })
-});
+// app.get('/getAll', (req, res) => {
+//   items.selectAll(function(err, result) {
+//     if(err) {
+//       console.log('server received database error when retrieving records');
+//     } else {
+//       res.send(result);
+//     }
+//   })
+// });
 
 
 var port = process.env.PORT;

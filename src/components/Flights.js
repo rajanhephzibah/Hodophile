@@ -1,50 +1,28 @@
-import React from 'react';
-import {DropdownButton, Dropdown, ButtonGroup} from 'react-bootstrap';
+import React, {useState} from 'react';
+import {Form} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import data from './countries.json';
 import './Design.css';
 
 const Flights = (props) => {
 
+  //const [selection, setSelection] = useState(0);
+
   const listofcountries =[];
-  data.map( (data) =>{
-          listofcountries.push(data.name)
-                  }
-                )
+  data.map((data) => {listofcountries.push(data.name)});
+  
+  // const handleSelection = (info) => {
+  //   console.log(info)
+  // };onChange={this.handleSelection(this)}
 
   return(
     <div>
-  {['Flight From', 'Flight To'].map(
-    (variant) => (
-      <DropdownButton
-        as={ButtonGroup}
-        key={variant}
-        id={`dropdown-variants-${variant}`}
-        title={variant}
-      >
-      {listofcountries.map(data=>(<Dropdown.Item title={data}>{data}</Dropdown.Item>
-      ))}
-      </DropdownButton>
-    ),
-  )}
+      <Form.Select aria-label="Default select example" >
+        <option>Flight To</option>
+        {listofcountries.map(data=>(<option value={data}>{data}</option>))}
+      </Form.Select>
     </div>
-
   )
 }
-
-  {/*if (typeof (props.flights[0]) === 'object') {
-    return (
-      <div>
-        {props.flights.map((flight) => (
-          <Flight handleFlightClick={props.handleFlightClick} flight={flight} key={flight.id}/>
-        ))}
-      </div>
-    )
-  } else {
-    return (
-      <h3 className = "glyphicon glyphicon-plane" id ="plane"></h3>
-    )
-  }*/}
-
 
 export default Flights;
