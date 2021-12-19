@@ -40,7 +40,7 @@ function Aboutproject() {
                  requirements so that they can view the corresponsing information.
               </p>
               <p>
-              4. Clean up design and make it improve UI to make the application more user-
+              4. Clean up design and improve UI to make the application more user-
               friendly.
               </p>              
             </p>

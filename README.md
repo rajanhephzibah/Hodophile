@@ -1,6 +1,9 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This website helps travellers learn more about COVID restrictions in different countries, risk levels and the documents required
+to travel there. It is not complete and requires a lot more work. Here are a couple things you will need if you decide to 
+work on it.
 
 ## Before You Start....
 
@@ -18,7 +21,7 @@ You'll need a couple of libraries and packages. Start with
 
 ### `npm install`
 
-This should install the required node packages. Then
+This should install the required node packages. Then install the bootstrap package since I used multiple Bootstrap components.
 
 ### `npm install react-bootstrap`
 
@@ -27,6 +30,18 @@ This project uses the Amadeus COVID-19 and travel safety API. So ensure you have
 ### `npm install amadeus`
 
 For information about each class, look at their respective files.
+
+## Some Possible Improvements
+
+If you want to work on it, here are a couple things you could fix:
+
+1. Find an API for the Passport/ Visa Requirements section to display the passport and visa requirements to visit different countries on the drop-down menu.
+
+2. Although this is probably a simple fix, I was unable to stretch the image on the home page to be a background image. Maybe you can find the solution!
+              
+3. Get an interactive map for the home page. On clicking a specific country, the application will ask the user to choose between COVID or passport requirements so that they can view the corresponsing information.
+
+4. Clean up design improve UI to make the application more user-friendly.
 
 ## Available Scripts
 
