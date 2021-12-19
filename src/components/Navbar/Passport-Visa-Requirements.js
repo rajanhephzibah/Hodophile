@@ -1,5 +1,10 @@
+//Page to find out Passport/VISA requirements for different countries
+//Needs to be set up with an API that provides this information
+
 import React from "react";
 import Flights from '../Flights.js';
+import passport from "../../passport.png"
+
 
 
 function PassportVisaRequirements() {
@@ -10,7 +15,7 @@ function PassportVisaRequirements() {
           <div class="col-lg-7">
             <img
               class="img-fluid rounded mb-4 mb-lg-0"
-              src="http://placehold.it/900x400"
+              src={passport}
               alt=""
             />
           </div>

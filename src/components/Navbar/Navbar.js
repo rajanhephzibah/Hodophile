@@ -1,8 +1,9 @@
+//Navabr on the top of the page with different options
+
 import React, { Component } from 'react';
 import {MenuItems} from "./MenuItems";
 import './Navbar.css';
 
-//fas fa-earth-americas
 
 
 class Navbar extends Component{
@@ -16,10 +17,7 @@ class Navbar extends Component{
     render(){
         return (
             <nav className="NavbarItems">
-                <h1 className="navbar-logo"><a href="/">Hodophile</a><i className ="fab fa-react"></i></h1>
-                <div className="menu-icon" onClick={this.handleClick}>
-                    <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
-                </div>
+                <h1 className="navbar-logo"><a href="/">Hodophile</a></h1>
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                     {MenuItems.map((item, index) => {
                         return (

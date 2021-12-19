@@ -1,5 +1,8 @@
+//Page to find out COVID requirements for different countries
+
 import React from "react";
 import Flights from '../Flights.js';
+import covid from "../../covid-19.png"
 
 
 function COVID() {
@@ -10,12 +13,12 @@ function COVID() {
           <div class="col-lg-7">
             <img
               class="img-fluid rounded mb-4 mb-lg-0"
-              src="http://placehold.it/900x400"
+              src={covid}
               alt=""
             />
           </div>
           <div class="col-lg-5">
-            <h1 class="font-weight-light">COVID-19 Rules and Regulations</h1>
+            <h1 class="font-weight-light">COVID-19 Data</h1>
             <Flights/>
           </div>
         </div>

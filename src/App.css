@@ -1,12 +1,36 @@
-/* * {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-} */
+} 
+
 .row-banner {
-  height: 100%;
   background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('./img.png');
+  background-size: cover;
+}
+
+.headline {
+  font-size: 50px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+.byline {
+  font-size: 20px;
+  font-style: italic;
+  color: black;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  top: 100px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }

@@ -11,6 +11,9 @@
 # production
 /build
 
+# passwords
+/config.js
+
 # misc
 .DS_Store
 .env.local

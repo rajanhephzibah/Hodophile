@@ -2,6 +2,32 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Before You Start....
+
+There are a couple things you should know before you begin using or looking at this project. 
+The following list of languages, concepts and libraries should help you understand the basics of this application.
+1. Javascript
+2. HTML
+3. CSS
+4. React
+5. Bootstrap
+
+## To Use It...
+
+You'll need a couple of libraries and packages. Start with 
+
+### `npm install`
+
+This should install the required node packages. Then
+
+### `npm install react-bootstrap`
+
+This project uses the Amadeus COVID-19 and travel safety API. So ensure you have an account with Amadeus and then fill out the empty_config.js with your credentials to run this app. Do not forget to rename the empty_config.js file to config.js. Next, you will need to install the amadeus package to complete setting up the API. For that, just use
+
+### `npm install amadeus`
+
+For information about each class, look at their respective files.
+
 ## Available Scripts
 
 In the project directory, you can run:

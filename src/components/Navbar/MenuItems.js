@@ -1,3 +1,4 @@
+// Different tabs on the navbar and links to their repective pages
 export const MenuItems = [
     {
         title: 'COVID-19',
@@ -10,8 +11,8 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
-        title: 'Contact Us',
-        url: '/Contact-Us',
+        title: 'About the Project',
+        url: '/About-project',
         cName: 'nav-links'
     },
     {
